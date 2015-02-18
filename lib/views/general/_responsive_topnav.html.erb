@@ -1,5 +1,9 @@
 <div id="topnav">
   <ul id="navigation">
+    <li class="<%= 'selected' if params[:controller] == 'general' and params[:action] != 'frontpage'%>">
+      <%= link_to _("Home"), frontpage_path %>
+    </li>
+
     <li class="<%= 'selected' if params[:controller] == 'help' and params[:action] != 'requesting'%>">
       <%= link_to _("About Us"), help_about_path %>
     </li>
